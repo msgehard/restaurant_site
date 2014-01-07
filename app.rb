@@ -12,6 +12,10 @@ class App
     ]
   end
 
+  def self.menu_items
+    ["Channa Masala", "Chicken Tikka Masala", "Saag Paneer", "Alu Gobi", "Masala Dosas"]
+  end
+
   private
   def body
     if File.exist?('public/index.html')

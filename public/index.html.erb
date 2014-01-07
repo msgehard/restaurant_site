@@ -28,7 +28,7 @@
   <img src="images/food.jpg">
   <ul>
 
-    <% ["Channa Masala", "Chicken Tikka Masala", "Saag Paneer", "Alu Gobi", "Masala Dosas"].each do |dish| %>
+    <% App.menu_items.each do |dish| %>
         <li><%= dish %></li>
     <% end %>
   </ul>
