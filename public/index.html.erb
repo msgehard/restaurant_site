@@ -27,11 +27,10 @@
   </p>
   <img src="images/food.jpg">
   <ul>
-    <li>Channa Masala</li>
-    <li>Chicken Tikka Masala</li>
-    <li>Saag Paneer</li>
-    <li>Alu Gobi</li>
-    <li>Masala Dosas</li>
+
+    <% ["Channa Masala", "Chicken Tikka Masala", "Saag Paneer", "Alu Gobi", "Masala Dosas"].each do |dish| %>
+        <li><%= dish %></li>
+    <% end %>
   </ul>
 </main>
 <footer>
