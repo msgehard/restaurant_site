@@ -28,7 +28,7 @@
   <img src="images/food.jpg">
   <ul>
 
-    <% App.menu_items.each do |dish| %>
+    <% Menu.new.items.each do |dish| %>
         <li><%= dish %></li>
     <% end %>
   </ul>

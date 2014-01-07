@@ -1,4 +1,5 @@
 require 'erb'
+require './menu'
 
 class App
   def call(env)
@@ -10,10 +11,6 @@ class App
         },
         body
     ]
-  end
-
-  def self.menu_items
-    ["Channa Masala", "Chicken Tikka Masala", "Saag Paneer", "Alu Gobi", "Masala Dosas"]
   end
 
   private
