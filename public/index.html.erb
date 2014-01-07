@@ -40,7 +40,8 @@
     Boulder, CO 80301
     <a href="mailto:bob@example.com">Contact Us</a>
   </address>
-  &copy; 2013
+  &copy; <%= Time.now.year %>
+  <% # Why don't I need the .to_s here? %>
 </footer>
 </body>
 </html>
