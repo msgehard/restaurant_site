@@ -7,8 +7,8 @@ class Item
     @description = description
   end
 
-  def price_on(date)
-    if date.wednesday?
+  def price
+    if Date.today.wednesday?
       original_price * 0.9
     else
       original_price

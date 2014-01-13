@@ -4,10 +4,12 @@ describe Item do
   it "calculates a 10% discount on Wednsedays" do
     item = Item.new("Hamburger", 10.00, "Yummy Goodness")
 
-    not_wednesday = Date.new(2014, 1, 16)
-    item.price_on(not_wednesday).must_equal 10.00
+    Timecop.freeze(Date.new(2014, 1, 16)) do
+      item.price.must_equal 10.00
+    end
 
-    wednesday = Date.new(2014, 1, 15)
-    item.price_on(wednesday).must_equal 9.00
+    Timecop.freeze(Date.new(2014, 1, 15)) do
+      item.price.must_equal 9.00
+    end
   end
 end
