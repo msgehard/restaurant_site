@@ -1,5 +1,6 @@
 class Menu
   def items
-    ["Channa Masala", "Chicken Tikka Masala", "Saag Paneer", "Alu Gobi", "Masala Dosas"]
+    file = File.open('config/menu.txt')
+    file.readlines
   end
 end
