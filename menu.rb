@@ -1,6 +1,5 @@
 class Menu
   def items
-    file = File.open('config/menu.txt')
-    file.readlines
+    File.open('config/menu.txt').readlines
   end
 end
