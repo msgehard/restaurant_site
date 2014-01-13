@@ -26,10 +26,19 @@ describe "Landing page" do
   end
 
   it "displays a list of names for 5 dishes" do
-    dishes = page.all('html body main ul li')
-    dishes.length.must_equal 5
+    dish_names = page.all('html body main dl dt')
+    dish_names.length.must_equal 5
 
-    dishes.each do |element|
+    dish_names.each do |element|
+      element.text.wont_equal ''
+    end
+  end
+
+  it "displays a list of descriptions for 5 dishes" do
+    dish_descriptions = page.all('html body main dl dd')
+    dish_descriptions.length.must_equal 5
+
+    dish_descriptions.each do |element|
       element.text.wont_equal ''
     end
   end

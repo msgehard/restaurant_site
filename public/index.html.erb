@@ -26,12 +26,13 @@
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
   <img src=<%= Images.new.random %>>
-  <ul>
+  <dl>
 
-    <% Menu.new.items.each do |dish| %>
-        <li><%= dish %></li>
+    <% Menu.new.items.each do |item| %>
+        <dt><%= item.name %> - $<%= item.price %></dt>
+        <dd><%= item.description %></dd>
     <% end %>
-  </ul>
+  </dl>
 </main>
 <footer>
   <address>
