@@ -1,5 +1,6 @@
 require 'erb'
 require './menu'
+require './images'
 
 class App
   def call(env)
